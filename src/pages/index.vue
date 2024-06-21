@@ -1,7 +1,3 @@
 <template>
-  <div>
-    <TailwindTest />
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <NuxtWelcome />
 </template>
