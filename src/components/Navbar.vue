@@ -1,9 +1,15 @@
 <template>
-  <header class="text-white">
+  <header class="text-white fixed top-0 w-full">
     <nav class="container mx-auto flex justify-between items-center py-3">
-      <NuxtLink class="text-xl text-left w-[200px]" to="#">Menu</NuxtLink>
-      <NuxtLink class="text-3xl text-center uppercase" to="/">Logo</NuxtLink>
-      <NuxtLink class="text-xl text-right w-[200px]" to="#contact">Get in Touch</NuxtLink>
+      <article class="flex-1 text-left">
+        <NuxtLink class="text-xl" to="#">Menu</NuxtLink>
+      </article>
+      <article class="flex-1 text-center">
+        <NuxtLink class="text-3xl uppercase" to="/">Logo</NuxtLink>
+      </article>
+      <article class="flex-1 text-right">
+        <NuxtLink class="text-xl" to="#contact">Get in Touch</NuxtLink>
+      </article>
     </nav>
   </header>
 </template>

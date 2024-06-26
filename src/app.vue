@@ -1,13 +1,12 @@
 <script setup lang="ts">
 useHead({
-  title: 'My App',
+  title: 'Selamat Datang di Welcome!',
   meta: [
-    { name: 'description', content: 'My amazing site.' }
+    { name: 'description', content: 'Selamat datang di web company profile website candi mangkrak.' }
   ],
   bodyAttrs: {
-    class: 'bg-gray-900 text-white'
+    class: 'bg-gray-900 text-white',
   },
-  script: [{ innerHTML: 'console.log(\'Hello world\')' }]
 })
 </script>
 <template>
