@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'My App',
+  title: 'Selamat Datang di Welcome!',
   meta: [
     { name: 'description', content: 'My amazing site.' }
   ],
