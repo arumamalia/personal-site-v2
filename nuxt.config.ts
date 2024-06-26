@@ -1,9 +1,12 @@
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  css: [
-    "~/assets/css/main.css",
+  modules: [
+    'nuxt-swiper',
+    '@vesp/nuxt-fontawesome'
   ],
+  devtools: { enabled: true },
+  css: ["~/assets/css/main.css"],
   srcDir: "src/",
   postcss: {
     plugins: {
@@ -15,4 +18,13 @@ export default defineNuxtConfig({
       "postcss-preset-env": {},
     },
   },
+  // @ts-ignore
+  fontawesome: {
+    icons: { 
+      solid: [
+        'chevron-left',
+        'chevron-right',
+      ],
+    }
+  }
 });
