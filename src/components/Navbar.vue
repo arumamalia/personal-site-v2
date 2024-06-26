@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-gray-900 text-white">
+  <header class="text-white">
     <nav class="container mx-auto flex justify-between items-center py-3">
       <NuxtLink class="text-xl text-left w-[200px]" to="#">Menu</NuxtLink>
       <NuxtLink class="text-3xl text-center uppercase" to="/">Logo</NuxtLink>
