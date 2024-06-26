@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-col h-[calc(100vh-(60px+37px))]">
+  <section class="flex flex-col h-[calc(100vh-60px)] py-10">
     <article class="flex flex-auto justify-center items-center w-full">
       <h1 class="text-5xl text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
     </article>
