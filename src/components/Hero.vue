@@ -1,0 +1,17 @@
+<template>
+  <section class="flex flex-col h-[calc(100vh-(60px+37px))]">
+    <article class="flex flex-auto justify-center items-center w-full">
+      <h1 class="text-5xl text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
+    </article>
+    <article class="flex flex-initial">
+      <header class="flex-1">
+        <h2 class="text-2xl">About Us</h2>
+        <h3 class="text-3xl">Company Name</h3>
+      </header>
+      <p class="flex-1 text-base text-justify">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi perspiciatis rerum pariatur repudiandae cum
+        nihil possimus velit, illo ut itaque voluptate adipisci qui fuga, quia laboriosam sequi sapiente placeat suscipit
+        voluptates provident quae? Laborum itaque sequi, magnam deserunt, facilis quam amet nulla accusantium saepe
+        provident eligendi maiores, minima repudiandae harum.</p>
+    </article>
+  </section>
+</template>
