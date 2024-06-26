@@ -10,6 +10,7 @@ export default defineNuxtConfig({
       autoprefixer: {},
       cssnano: {},
       tailwindcss: {},
+      "postcss-simple-vars": {},
       "postcss-import": {},
       "postcss-preset-env": {},
     },
