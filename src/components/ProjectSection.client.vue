@@ -11,7 +11,7 @@ const slides = ref(Array.from({ length: 10 }, () => {
 </script>
 
 <template>
-  <section class="h-screen flex flex-col justify-center gap-8">
+  <section class="h-200 flex flex-col justify-center gap-8">
     <h2 class="text-center text-3xl">Projects</h2>
     <article class="flex gap-4">
       <button id="prev-project" class="text-3xl shrink-0">
