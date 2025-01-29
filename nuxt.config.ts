@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     plugins: {
       autoprefixer: {},
       cssnano: {},
-      tailwindcss: {},
+      "@tailwindcss/postcss" : {},
       "postcss-simple-vars": {},
       "postcss-import": {},
       "postcss-preset-env": {},
