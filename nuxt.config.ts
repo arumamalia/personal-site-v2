@@ -5,8 +5,15 @@ export default defineNuxtConfig({
     'nuxt-swiper',
     '@vesp/nuxt-fontawesome'
   ],
-  devtools: { enabled: true },
-  css: ["~/assets/css/main.css"],
+  devtools: {
+    enabled: true
+  },
+  css: [
+    "@fontsource/poppins/400.css",
+    "@fontsource/poppins/500.css",
+    "@fontsource/poppins/600.css",
+    "~/assets/css/main.css"
+  ],
   srcDir: "src/",
   postcss: {
     plugins: {
