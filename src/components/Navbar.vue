@@ -1,6 +1,25 @@
+<script setup lang="ts">
+const isScrolling = useState<boolean>("isScrolling", () => false);
+
+const onScroll = () => {
+  isScrolling.value = window.scrollY > 60;
+};
+
+onMounted(() => {
+  window.addEventListener("scroll", onScroll);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("scroll", onScroll);
+});
+</script>
+
 <template>
-  <header class="text-white fixed top-0 w-full">
-    <nav class="container mx-auto flex justify-between items-center py-3">
+  <header
+    class="text-white fixed top-0 z-10 w-full transition-all duration-500 ease-in-out"
+    :class="{ 'backdrop-brightness-75 backdrop-blur-lg': isScrolling }"
+  >
+    <nav class="container mx-auto flex justify-between items-center px-8 lg:px-0 py-3">
       <article class="flex-1 text-left">
         <NuxtLink class="text-xl" to="#">Menu</NuxtLink>
       </article>
