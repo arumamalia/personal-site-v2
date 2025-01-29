@@ -1,20 +1,23 @@
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: [
     'nuxt-swiper',
     '@vesp/nuxt-fontawesome'
   ],
+
   devtools: {
     enabled: true
   },
+
   css: [
     "@fontsource/poppins/400.css",
     "@fontsource/poppins/500.css",
     "@fontsource/poppins/600.css",
     "~/assets/css/main.css"
   ],
+
   srcDir: "src/",
+
   postcss: {
     plugins: {
       autoprefixer: {},
@@ -25,6 +28,7 @@ export default defineNuxtConfig({
       "postcss-preset-env": {},
     },
   },
+
   // @ts-ignore
   fontawesome: {
     icons: { 
@@ -33,5 +37,7 @@ export default defineNuxtConfig({
         'chevron-right',
       ],
     }
-  }
+  },
+
+  compatibilityDate: "2025-01-29"
 });
