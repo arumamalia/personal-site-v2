@@ -1,5 +1,9 @@
+<script setup lang="ts">
+  const date = new Date()
+</script>
+
 <template>
-  <footer class="text-sm text-center py-2">
-    <small>@ Copyright 2024 All Right Reserved </small>  
+  <footer class="text-center py-2">
+    <p><small>Copyright &copy; 2024-{{ date.getFullYear()}} Hanacaraka, All Right Reserved.</small></p>
   </footer>
 </template>
