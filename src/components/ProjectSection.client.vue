@@ -11,39 +11,49 @@ const slides = ref(Array.from({ length: 10 }, () => {
 </script>
 
 <template>
-  <section class="h-screen flex flex-col gap-8 justify-center">
+  <section class="h-screen flex flex-col gap-8">
     <h2 class="text-center text-3xl">Projects</h2>
-    <article class="flex">
-      <button id="prev-project" class="text-3xl">
+    <article class="flex gap-4">
+      <button id="prev-project" class="text-3xl shrink-0">
         <font-awesome icon="chevron-left" />
       </button>
-      <Swiper 
-        :height="300" 
-        :spaceBetween="20"
-        :modules="[
-          SwiperAutoplay,
-          SwiperNavigation
-        ]" 
-        :navigation="{
-          nextEl: '#next-project',
-          prevEl: '#prev-project',
-        }"
-        :slidesPerView="4" 
-        :loop="true"
-        :autoplay="{
-          delay: 8000,
-          disableOnInteraction: true
-        }" 
-        class="w-11/12"
-      >
-        <SwiperSlide 
-          v-for="(slide, idx) in slides" :key="idx"
-          :style="`background-color: ${slide.bg}; color: ${slide.color}`"
+      <div class="basis-auto grow-0 w-full overflow-hidden">
+        <Swiper 
+          :height="300" 
+          :spaceBetween="20"
+          :modules="[
+            SwiperAutoplay,
+            SwiperNavigation
+          ]" 
+          :navigation="{
+            nextEl: '#next-project',
+            prevEl: '#prev-project',
+          }"
+          :slidesPerView="1" 
+          :breakpoints="{
+            '768': {
+              slidesPerView: 3,
+            },
+            '1280': {
+              slidesPerView: 4,
+            }
+          }"
+          :loop="true"
+          :autoplay="{
+            delay: 8000,
+            disableOnInteraction: true
+          }" 
+          class="w-full"
         >
-          {{ idx }}
-        </SwiperSlide>
-      </Swiper>
-      <button id="next-project" class="text-3xl">
+          <SwiperSlide 
+            v-for="(slide, idx) in slides" :key="idx"
+            :style="`background-color: ${slide.bg}; color: ${slide.color}`"
+          >
+            {{ idx }}
+          </SwiperSlide>
+        </Swiper>
+      </div>
+      <button id="next-project" class="text-3xl shrink-0">
         <font-awesome icon="chevron-right" />
       </button>
     </article>
