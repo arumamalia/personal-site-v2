@@ -1,6 +1,6 @@
 <template>
-  <section class="flex flex-col h-screen py-10">
-    <article class="flex flex-auto justify-center items-center w-full">
+  <section class="flex flex-col min-h-screen py-10">
+    <article class="flex flex-auto justify-center items-center py-32 w-full">
       <h1 class="text-5xl text-center">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h1>
     </article>
     <article class="flex flex-initial flex-wrap gap-8">
