@@ -21,10 +21,6 @@ export default defineNuxtSchema({
               title: "Site Description",
               default: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, laborum.",
             }),
-            favicon: field({
-              type: "icon",
-              title: "Favicon",
-            }),
           },
         }),
       },
