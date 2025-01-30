@@ -3,7 +3,6 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   modules: [
-    "@nuxthq/studio",
     "@nuxt/content",
     "nuxt-swiper",
     "@vesp/nuxt-fontawesome",
@@ -15,19 +14,13 @@ export default defineNuxtConfig({
     "~/assets/css/main.css",
   ],
   content: {
-    watch: {
-      enabled: false,
-      ws: {
-        // @ts-ignore
-        port: 4000,
-        showURL: true,
-      },
+    preview: {
+      api: "https://api.nuxt.studio",
     },
-    content: {
-      preview: {
-        api: "https://api.nuxt.studio",
-      },
-    },
+    // @ts-ignore
+    experimental: {
+      clientDB: true
+    }
   },
   postcss: {
     plugins: {
