@@ -17,10 +17,6 @@ export default defineNuxtConfig({
     preview: {
       api: "https://api.nuxt.studio",
     },
-    // @ts-ignore
-    experimental: {
-      clientDB: true
-    }
   },
   postcss: {
     plugins: {
