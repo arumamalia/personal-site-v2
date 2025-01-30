@@ -21,6 +21,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@nuxthq/studio": "^2.2.1",
     "@tailwindcss/postcss": "^4.0.0",
     "@vesp/nuxt-fontawesome": "^1.0.4",
     "autoprefixer": "^10.4.19",
