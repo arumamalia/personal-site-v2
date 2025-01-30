@@ -16,8 +16,13 @@ export default defineNuxtConfig({
         // @ts-ignore
         port: 4000,
         showURL: true,
-      }
-    }
+      },
+    },
+    content: {
+      preview: {
+        api: "https://api.nuxt.studio",
+      },
+    },
   },
   postcss: {
     plugins: {
