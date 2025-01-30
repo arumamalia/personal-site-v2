@@ -1,8 +1,10 @@
 <script setup lang="ts">
+const appConfig = useAppConfig();
+const { site_name, site_description } = appConfig?.global?.general || {};
 useHead({
-  title: 'Selamat Datang di Welcome!',
+  title: site_name,
   meta: [
-    { name: 'description', content: 'Selamat datang di web company profile website candi mangkrak.' }
+    { name: 'description', content: site_description }
   ],
   bodyAttrs: {
     class: 'bg-gray-900 text-white',

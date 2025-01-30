@@ -1,4 +1,7 @@
 <script setup lang="ts">
+const appConfig = useAppConfig();
+const { site_name } = appConfig?.global?.general || {};
+
 const isScrolling = useState<boolean>("isScrolling", () => false);
 
 const onScroll = () => {
@@ -24,7 +27,7 @@ onUnmounted(() => {
         <NuxtLink class="text-sm md:text-xl" to="#">Menu</NuxtLink>
       </article>
       <article class="flex-1 text-center">
-        <NuxtLink class="text-3xl uppercase" to="/">Logo</NuxtLink>
+        <NuxtLink class="text-3xl uppercase" to="/">{{ site_name }}</NuxtLink>
       </article>
       <article class="flex-1 text-right">
         <NuxtLink class="text-sm md:text-xl" to="#contact">Get in Touch</NuxtLink>
