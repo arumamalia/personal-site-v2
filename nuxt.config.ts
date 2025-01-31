@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     "~/assets/css/main.css",
   ],
   content: { 
-
+    contentHead: false,
   },
   postcss: {
     plugins: {
