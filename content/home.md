@@ -1,7 +1,3 @@
----
-title: Home Page
-description: Landing page
----
 
 ::hero-section
 ::

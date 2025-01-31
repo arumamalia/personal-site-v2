@@ -14,7 +14,9 @@ export default defineNuxtConfig({
     "~/assets/css/main.css",
   ],
   content: {
-    // @ts-ignore
+    watch: {
+      enabled: true,
+    },
     preview: {
       api: "https://api.nuxt.studio",
     },
