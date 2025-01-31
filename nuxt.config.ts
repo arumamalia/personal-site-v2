@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/content",
     "nuxt-swiper",
-    "@vesp/nuxt-fontawesome",
+    "@vesp/nuxt-fontawesome"
   ],
   css: [
     "@fontsource/poppins/400.css",
@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     "~/assets/css/main.css",
   ],
   content: {
+    // @ts-ignore
     preview: {
       api: "https://api.nuxt.studio",
     },
