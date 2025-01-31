@@ -11,11 +11,14 @@ Hanacaraka.
 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi perspiciatis rerum pariatur repudiandae cum nihil possimus velit, illo ut itaque voluptate adipisci qui fuga, quia laboriosam sequi sapiente placeat suscipit voluptates provident quae? Laborum itaque sequi, magnam deserunt, facilis quam amet nulla accusantium saepe provident eligendi maiores, minima repudiandae harum.
 ::
 
-::our-service-section
+::service-template
+Our Service
 ::
 
-::project-template 
+::project-template
+Portfolio
 ::
 
-::contact-section
+::contact-template
+Contact Us
 ::
