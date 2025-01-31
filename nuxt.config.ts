@@ -4,6 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     "@nuxt/content",
+    "@nuxthq/studio",
     "nuxt-swiper",
     "@vesp/nuxt-fontawesome"
   ],
@@ -13,13 +14,8 @@ export default defineNuxtConfig({
     "@fontsource/poppins/600.css",
     "~/assets/css/main.css",
   ],
-  content: {
-    watch: {
-      enabled: true,
-    },
-    preview: {
-      api: "https://api.nuxt.studio",
-    },
+  content: { 
+
   },
   postcss: {
     plugins: {
@@ -36,8 +32,5 @@ export default defineNuxtConfig({
     icons: {
       solid: ["chevron-left", "chevron-right"],
     },
-  },
-  future: {
-    compatibilityVersion: 4,
   },
 });
