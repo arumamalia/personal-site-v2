@@ -1,13 +1,16 @@
 ---
-title: 'Home Page'
-description: 'Landing page'
+title: Home Page
+description: Landing page
 ---
 
+::hero-section
+::
 
-:heroSection
+::our-service-section
+::
 
-:ourServiceSection
+::project-section
+::
 
-:projectSection
-
-:contactSection
+::contact-section
+::
