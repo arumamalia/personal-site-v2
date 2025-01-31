@@ -15,8 +15,10 @@
 </script>
 
 <template>
-  <section class="h-200 flex flex-col justify-center gap-8">
-    <h2 class="text-center text-3xl">Projects</h2>
+  <section class="h-150 flex flex-col justify-center">
+    <h2 class="text-center text-3xl lg:text-4xl xl:text-5xl mb-8">
+      <ContentSlot unwrap="p" />
+    </h2>
     <article class="flex gap-4">
       <button id="prev-project" class="text-3xl shrink-0 cursor-pointer">
         <font-awesome icon="chevron-left" />

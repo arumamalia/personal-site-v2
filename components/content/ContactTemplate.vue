@@ -19,7 +19,9 @@ const submit = () => {
 </script>
 <template>
   <section class="h-150 flex flex-col justify-center mx-auto max-w-300">
-    <h2 class="text-center text-white text-5xl mb-12">Get in Touch</h2>
+    <h2 class="text-center text-white text-3xl lg:text-4xl xl:text-5xl mb-8">
+      <ContentSlot unwrap="p" />
+    </h2>
     <form action="#" @submit.prevent="submit" class="flex flex-wrap gap-x-4 justify-center w-full">
       <TextField v-model="form.fullname" class="basis-sm grow" name="fullname" label="Name" />
       <TextField v-model="form.email" class="basis-sm grow" name="email" label="Email" />
