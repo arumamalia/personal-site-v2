@@ -12,10 +12,13 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi perspiciatis 
 ::
 
 ::our-service-section
+Our Service
 ::
 
-::project-template 
+::project-template
+Portfolio
 ::
 
 ::contact-section
+Contact Us
 ::
