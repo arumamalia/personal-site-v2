@@ -23,13 +23,13 @@ onUnmounted(() => {
     :class="{ 'backdrop-brightness-75 backdrop-blur-lg': isScrolling }"
   >
     <nav class="container mx-auto flex justify-between items-center px-4 lg:px-0 py-3">
-      <article class="flex-1 text-left">
+      <article class="basis-1/6 text-left">
         <NuxtLink class="text-sm md:text-xl" to="#">Menu</NuxtLink>
       </article>
       <article class="flex-1 text-center">
-        <NuxtLink class="text-3xl uppercase" to="/">{{ site_name }}</NuxtLink>
+        <NuxtLink class="text-2xl lg:text-3xl uppercase" to="/">{{ site_name }}</NuxtLink>
       </article>
-      <article class="flex-1 text-right">
+      <article class="basis-1/6 text-right">
         <NuxtLink class="text-sm md:text-xl" to="#contact">Get in Touch</NuxtLink>
       </article>
     </nav>
