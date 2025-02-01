@@ -6,7 +6,7 @@
   }>();
 </script>
 <template>
-  <section class="flex flex-col min-h-screen py-10">
+  <section class="flex flex-col min-h-[calc(100vh-40px)] py-10">
     <article class="flex flex-auto justify-center items-center py-32 w-full">
       <h1 class="text-5xl text-center">
         <ContentSlot unwrap="p" />
