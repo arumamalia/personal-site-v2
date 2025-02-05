@@ -23,5 +23,15 @@
     "id": 5,
     "name": "Third Project",
     "image": "/images/project-3.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Third Project",
+    "image": "/images/project-3.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Project Candi",
+    "image": "/images/project-3.jpg"
   }
 ]
