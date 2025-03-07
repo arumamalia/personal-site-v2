@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxthq/studio",
     "nuxt-swiper",
-    "@vesp/nuxt-fontawesome"
+    "@vesp/nuxt-fontawesome",
+    "@nuxt/image",
   ],
   css: [
     "@fontsource/poppins/400.css",
