@@ -46,7 +46,7 @@ const sendEmail = () => {
 </script>
 <template>
   <section class="flex flex-row justify-center contactme-wrapper" id="contact-me">
-    <img class="h-[120px] aspect-auto icon-msg" :src="darkTheme ? './icon-msg-light.png' : './icon-msg-dark.png'">
+    <img class="icon-msg" :src="darkTheme ? './icon-msg-light.png' : './icon-msg-dark.png'">
     <form ref="form" action="#" @submit.prevent="sendEmail" class="flex flex-wrap gap-x-4 w-full">
       <TextField v-model="name" class="basis-[220px] grow text-field" name="name" label="Name" />
       <TextField v-model="email" class="basis-[220px] grow text-field" name="email" label="Email" />
