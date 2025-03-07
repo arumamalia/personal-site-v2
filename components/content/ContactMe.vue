@@ -46,12 +46,12 @@ const sendEmail = () => {
 </script>
 <template>
   <section class="flex flex-row justify-center contactme-wrapper" id="contact-me">
-    <img class="h-[120px] aspect-square icon-msg" :src="darkTheme ? './icon-msg-light.png' : './icon-msg-dark.png'">
+    <img class="h-[120px] aspect-auto icon-msg" :src="darkTheme ? './icon-msg-light.png' : './icon-msg-dark.png'">
     <form ref="form" action="#" @submit.prevent="sendEmail" class="flex flex-wrap gap-x-4 w-full">
       <TextField v-model="name" class="basis-[220px] grow text-field" name="name" label="Name" />
       <TextField v-model="email" class="basis-[220px] grow text-field" name="email" label="Email" />
-      <TextField v-model="subject" class="basis-[220px] grow text-field" name="subject" label="Phone" />
-      <TextField v-model="message" class="grow" name="message" label="Message" />
+      <TextField v-model="subject" class="basis-[220px] grow text-field" name="subject" label="Subject" />
+      <TextField v-model="message" class="basis-md grow" name="message" label="Message" />
       <button type="submit" class="cursor-pointer">
         <img class="h-[34px] btn-msg" :src="darkTheme ? './btn-msg-light.png' : './btn-msg-dark.png'">
       </button>
