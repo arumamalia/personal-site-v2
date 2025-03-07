@@ -1,0 +1,28 @@
+{
+    "body": [
+        {
+            "job_position": "Frontend Developer",
+            "company": "KB Finansia Multi Finance",
+            "period": "Feb 2022 - Present",
+            "job_desc": [
+                "Collaborating with UX/UI designers and backend developers to translate design concepts into functional and visually appealing web interfaces.",
+                "Developing and maintaining user-friendly and secure CMS interfaces using PHP with CI framework, HTML, Bootstrap, and JavaScript with jQuery library.",
+                "Optimizing websites for performance across different browsers.",
+                "Writing unit tests to ensure code quality and maintainability.",
+                "Refactor and restructure existing codebases to improve maintainability, performance, and efficiency.",
+                "Debug and fix any issues or bugs that arise during development and post-release."
+            ]
+        },
+        {
+            "job_position": "Backend Developer",
+            "company": "KB Finansia Multi Finance",
+            "period": "Jul 2021 - Jan 2022",
+            "job_desc": [
+                "Designing and building a web API that adheres to the REST architectural style using Golang with Echo framework.",
+                "Incorporating functionalities within the project that enable users to retrieve and manipulate specific data from a database using SQL queries.",
+                "Designing the database structure and implementing it using mySQL server.",
+                "Refining and restructuring the code to enhance its efficiency, readability, and maintainability."
+            ]
+        }
+    ]
+}

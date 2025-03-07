@@ -30,7 +30,14 @@ export default defineNuxtConfig({
   // @ts-ignore
   fontawesome: {
     icons: {
-      solid: ["chevron-left", "chevron-right"],
+      solid: ["chevron-left", "chevron-right", "wand-magic-sparkles", "bolt-lightning"],
+    },
+  },
+  runtimeConfig: {
+    public: {
+      emailjsServiceId: process.env.NUXT_PUBLIC_EMAILJS_SERVICE_ID,
+      emailjsTemplateId: process.env.NUXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+      emailjsPublicKey: process.env.NUXT_PUBLIC_EMAILJS_PUBLIC_KEY,
     },
   },
 });

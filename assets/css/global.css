@@ -1,3 +1,805 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+/* * {
+  transition: all 500ms ease-in-out;
+}
+
+img {
+  transition: all 500ms ease-in-out !important;
+} */
+
+.greet::before {
+  content: 'Halo, saya \a';
+  white-space: pre;
+  -webkit-animation: change-greet 20s ease-in infinite both;
+  animation: change-greet 20s ease-in infinite both;
+}
+
+@keyframes change-greet {
+  0% {
+    content: 'Halo, saya \a';
+  }
+
+  10% {
+    content: 'Hi, I am \a';
+  }
+
+  20% {
+    content: 'Bonjour, je suis \a';
+  }
+
+  30% {
+    content: 'Hei, olen \a';
+  }
+
+  40% {
+    content: 'Hallo, ik ben \a';
+  }
+
+  50% {
+    content: 'Hola soy \a';
+  }
+
+  60% {
+    content: 'Hallo, ich bin \a';
+  }
+
+  70% {
+    content: 'こんにちは私は \a';
+  }
+
+  80% {
+    content: '안녕하세요, 저는 \a';
+  }
+
+  90% {
+    content: 'Ciao sono \a';
+  }
+
+  100% {
+    content: 'Olá eu sou \a';
+  }
+}
+
+@media screen and (max-width : 1728px) {
+  .p-container {
+    padding-left: 177px;
+    padding-right: 177px;
+  }
+
+  .logo {
+    height: 120px;
+  }
+
+  .title-the {
+    font-size: 72px;
+  }
+
+  .title-daily {
+    font-size: 128px;
+  }
+
+  .star {
+    height: 22px;
+  }
+
+  .theme {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .sub-menu {
+    font-size: 32px;
+  }
+
+  .sub-menu-scr {
+    font-size: 18px;
+  }
+
+  .border-wrap {
+    margin-top: 196px;
+  }
+
+  .swiper-wrapper {
+    width: 580px;
+  }
+
+  .project-wrapper {
+    width: 344px;
+  }
+
+  .text-project {
+    font-size: 96px;
+  }
+
+  .text-revealed {
+    font-size: 48px;
+  }
+
+  .project-title {
+    font-size: 30px;
+  }
+
+  .intro {
+    font-size: 137px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .p-container {
+    padding-left: 137px;
+    padding-right: 137px;
+  }
+
+  .logo {
+    height: 114px;
+  }
+
+  .title-the {
+    font-size: 60px;
+  }
+
+  .title-daily {
+    font-size: 108px;
+  }
+
+  .star {
+    height: 20px;
+  }
+
+  .theme {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .sub-menu {
+    font-size: 24px;
+  }
+
+  .sub-menu-scr {
+    font-size: 16px;
+  }
+
+  .border-wrap {
+    margin-top: 174px;
+  }
+
+  .swiper-wrapper {
+    width: 520px;
+  }
+
+  .project-wrapper {
+    width: 260px;
+  }
+
+  .text-project {
+    font-size: 70px;
+  }
+
+  .text-revealed {
+    font-size: 36px;
+  }
+
+  .project-title {
+    font-size: 26px;
+  }
+
+  .intro {
+    font-size: 137px;
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .p-container {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .logo {
+    height: 110px;
+  }
+
+  .title-the {
+    font-size: 60px;
+  }
+
+  .title-daily {
+    font-size: 112px;
+  }
+
+  .star {
+    height: 20px;
+  }
+
+  .theme {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .sub-menu {
+    font-size: 24px;
+  }
+
+  .sub-menu-scr {
+    font-size: 16px;
+  }
+
+  .border-wrap {
+    margin-top: 172px;
+  }
+
+  .swiper-wrapper {
+    width: 520px;
+  }
+
+  .project-wrapper {
+    width: 260px;
+  }
+
+  .text-project {
+    font-size: 70px;
+  }
+
+  .text-revealed {
+    font-size: 36px;
+  }
+
+  .project-title {
+    font-size: 26px;
+  }
+
+  .intro {
+    font-size: 118px;
+  }
+
+}
+
+@media screen and (max-width: 1024px) {
+  .p-container {
+    padding-left: 90px;
+    padding-right: 90px;
+  }
+
+  .logo {
+    height: 94px;
+  }
+
+  .title-the {
+    font-size: 56px;
+  }
+
+  .title-daily {
+    font-size: 90px;
+  }
+
+  .star {
+    height: 16px;
+  }
+
+  .theme {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .sub-menu {
+    font-size: 20px;
+  }
+
+  .sub-menu-scr {
+    font-size: 16px;
+  }
+
+  .border-wrap {
+    margin-top: 148px;
+  }
+
+  .intro {
+    font-size: 96px;
+  }
+
+  .greet {
+    font-size: 33px;
+  }
+
+  .name {
+    font-size: 50px;
+  }
+
+  .moving-img {
+    height: 360px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  .swiper-wrapper {
+    width: 446px;
+  }
+
+  .project-wrapper {
+    width: 216px;
+  }
+
+  .text-project {
+    font-size: 60px;
+  }
+
+  .text-revealed {
+    font-size: 32px;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+
+  .exp {
+    font-size: 40px;
+  }
+
+  .exp-there {
+    font-size: 22px;
+  }
+
+  .hand-pointing {
+    height: 32px;
+  }
+
+  .job-pst {
+    font-size: 26px;
+  }
+
+  .job-cmp {
+    font-size: 14px;
+  }
+
+  .icon-msg {
+    height: 92px;
+  }
+
+  .btn-msg {
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .p-container {
+    padding-left: 62px;
+    padding-right: 62px;
+  }
+
+  .logo {
+    height: 68px;
+  }
+
+  .title-the {
+    font-size: 38px;
+  }
+
+  .title-daily {
+    font-size: 72px;
+  }
+
+  .theme {
+    width: max-content;
+    font-size: 12px;
+  }
+
+  .menu-sm {
+    flex-grow: 0;
+  }
+
+  .border-wrap {
+    margin-top: 106px;
+  }
+
+  .intro {
+    font-size: 72px;
+  }
+
+  .greet {
+    font-size: 33px;
+  }
+
+  .name {
+    font-size: 50px;
+  }
+
+  .moving-img {
+    height: 170px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  .swiper-wrapper {
+    width: 400px;
+  }
+
+  .project-wrapper {
+    width: 200px;
+  }
+
+  .text-project {
+    font-size: 46px;
+  }
+
+  .text-revealed {
+    font-size: 26px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .exp {
+    font-size: 40px;
+  }
+
+  .exp-there {
+    font-size: 22px;
+  }
+
+  .hand-pointing {
+    height: 26px;
+  }
+
+  .job-pst {
+    font-size: 24px;
+  }
+
+  .job-cmp {
+    font-size: 12px;
+  }
+
+  .icon-msg {
+    height: 60px;
+  }
+
+  .text-field {
+    flex-basis: 150px;
+  }
+
+  .btn-msg {
+    height: 20px;
+  }
+
+  .projects {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container-project {
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .desc-project {
+    align-items: start;
+  }
+
+  .socmed {
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .p-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .logo {
+    height: 56px;
+  }
+
+  .title-the {
+    font-size: 36px;
+  }
+
+  .title-daily {
+    font-size: 60px;
+  }
+
+  .theme {
+    width: max-content;
+    font-size: 12px;
+  }
+
+  .menu-sm {
+    flex-grow: 0;
+  }
+
+  .border-wrap {
+    margin-top: 94px;
+  }
+
+  .intro {
+    font-size: 62px;
+  }
+
+  .greet {
+    font-size: 28px;
+  }
+
+  .name {
+    font-size: 42px;
+  }
+
+  .moving-img {
+    height: 180px;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  .swiper-wrapper {
+    width: 400px;
+  }
+
+  .project-wrapper {
+    width: 200px;
+  }
+
+  .text-project {
+    font-size: 46px;
+  }
+
+  .text-revealed {
+    font-size: 26px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .exp {
+    font-size: 40px;
+  }
+
+  .exp-there {
+    font-size: 22px;
+  }
+
+  .hand-pointing {
+    height: 26px;
+  }
+
+  .job-pst {
+    font-size: 24px;
+  }
+
+  .job-cmp {
+    font-size: 12px;
+  }
+
+  .exp-wrapper {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .icon-msg {
+    height: 50px;
+  }
+
+  .text-field {
+    flex-basis: 100px;
+  }
+
+  .btn-msg {
+    height: 14px;
+  }
+
+  .projects {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container-project {
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .desc-project {
+    align-items: start;
+  }
+
+  .socmed {
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .p-container {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .logo {
+    height: 32px;
+  }
+
+  .title-the {
+    font-size: 24px;
+  }
+
+  .title-daily {
+    font-size: 30px;
+  }
+
+  .site-name {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .theme {
+    width: max-content;
+    font-size: 12px;
+  }
+
+  .font-menu {
+    font-size: 14px;
+  }
+
+  .menu-sm {
+    flex-grow: 0;
+  }
+
+  .border-wrap {
+    margin-top: 64px;
+  }
+
+  .padding-border-wrap {
+    padding: 8px;
+  }
+
+  .intro {
+    font-size: 32px;
+  }
+
+  .greet {
+    font-size: 20px;
+  }
+
+  .name {
+    font-size: 30px;
+  }
+
+  .moving-img {
+    height: 260px;
+  }
+
+  .moving-img-wrapper {
+    width: 100%;
+  }
+
+  .desc1 {
+    display: block;
+  }
+
+  .desc {
+    font-size: 12px;
+  }
+
+  .head-abtme {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .desc1-up {
+    display: none;
+  }
+
+  .mobile-desc-abtme {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .arrow {
+    font-size: 20px;
+  }
+
+  .project-arrow {
+    gap: 10px;
+  }
+
+  .swiper-wrapper {
+    width: 220px;
+  }
+
+  .project-wrapper {
+    width: 200px;
+  }
+
+  .text-project {
+    font-size: 46px;
+  }
+
+  .text-revealed {
+    font-size: 26px;
+  }
+
+  .project-title {
+    font-size: 18px;
+  }
+
+  .exp {
+    font-size: 30px;
+  }
+
+  .exp-there {
+    font-size: 14px;
+  }
+
+  .hand-pointing {
+    height: 22px;
+  }
+
+  .job-pst {
+    font-size: 20px;
+  }
+
+  .job-cmp {
+    font-size: 12px;
+  }
+
+  .exp-wrapper {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .icon-msg {
+    height: 100px;
+    width: max-content;
+  }
+
+  .text-field {
+    flex-basis: 160px;
+  }
+
+  .btn-msg {
+    height: 20px;
+  }
+
+  .projects {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container-project {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .desc-project {
+    align-items: start;
+  }
+
+  .contactme-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .socmed {
+    height: 22px;
+  }
+
+  .socmed-wrapper {
+    gap: 10px;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: start;
+    gap: 6px;
+  }
+}

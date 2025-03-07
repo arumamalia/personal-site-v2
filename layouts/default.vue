@@ -1,7 +1,9 @@
 <template>
   <Navbar />
   <Container>
-    <slot />
+    <BorderWrapper>
+      <slot />
+    </BorderWrapper>
   </Container>
   <Footer />
 </template>

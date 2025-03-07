@@ -1,0 +1,12 @@
+@theme {
+    --font-days: 'Days One', sans-serif;
+    --font-cookie: 'Cookie', cursive;
+    --font-anton: 'Anton', sans-serif;
+    --font-stencil: 'Stencil', sans-serif;
+    --font-abril: 'Abril Fatface', serif;
+    --font-bernard: 'Bernard MT Condensed', sans-serif;
+    --font-bevan: 'Bevan', serif;
+    --font-oswald: 'Oswald', sans-serif;
+    --color-blue: #274285;
+    --color-yellow: #ECA71E;
+}

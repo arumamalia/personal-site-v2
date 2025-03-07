@@ -2,7 +2,7 @@
   const route = useRoute();
   const contentType = route.path.split('/').filter(x => x)[0];
   const { error } = await useAsyncData('content-' + route.path, () => queryContent(route.path).findOne());
-
+  
   if (error.value) {
     throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
   }
@@ -11,7 +11,7 @@
 <template>
   <ContentDoc 
     :id="contentType === 'docs' ? 'content-docs' : 'content'" 
-    tag="article" class="pt-[59.98px]"
+    tag="article"
     v-if="!error" 
   />
 </template>
