@@ -1,4 +1,5 @@
 <template>
+  <Loader />
   <Navbar />
   <Container>
     <BorderWrapper>
@@ -6,4 +7,5 @@
     </BorderWrapper>
   </Container>
   <Footer />
+  <Cursor />
 </template>

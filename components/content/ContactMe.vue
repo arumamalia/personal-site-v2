@@ -1,6 +1,8 @@
 <script setup lang="ts">
 const darkTheme = useState<boolean>("darkTheme", () => false);
 
+const loader = useState<boolean>("loader", () => false);
+
 import { ref } from 'vue';
 import emailjs from '@emailjs/browser';
 
@@ -14,9 +16,8 @@ const runtimeConfig = useRuntimeConfig();
 
 const sendEmail = () => {
   if (form.value) {
-    console.log(form);
-    console.log(form.value);
-    
+    loader.value = true;
+
     const templateParams = {
       name: name.value,
       email: email.value,
@@ -37,8 +38,10 @@ const sendEmail = () => {
         email.value = '';
         subject.value = '';
         message.value = '';
+        loader.value = false;
       }, (error) => {
         console.log('FAILED...', error);
+        loader.value = false;
       });
   }
 };
@@ -46,7 +49,7 @@ const sendEmail = () => {
 </script>
 <template>
   <section class="flex flex-row justify-center contactme-wrapper" id="contact-me">
-    <img class="icon-msg" :src="darkTheme ? './icon-msg-light.png' : './icon-msg-dark.png'">
+    <img class="icon-msg h-[140px]" :src="darkTheme ? './icon-msg-light.png' : './icon-msg-dark.png'">
     <form ref="form" action="#" @submit.prevent="sendEmail" class="flex flex-wrap gap-x-4 w-full">
       <TextField v-model="name" class="basis-[220px] grow text-field" name="name" label="Name" />
       <TextField v-model="email" class="basis-[220px] grow text-field" name="email" label="Email" />

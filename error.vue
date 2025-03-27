@@ -1,15 +1,15 @@
 <script setup lang="ts">
-  import type { NuxtError } from '#app'
+import type { NuxtError } from '#app'
 
-  const props = defineProps({
-    error: Object as () => NuxtError
-  });
+const props = defineProps({
+  error: Object as () => NuxtError
+});
 
 onMounted(() => {
   console.log(props.error);
 });
 
-  const handleError = () => clearError({ redirect: '/' })
+const handleError = () => clearError({ redirect: '/' })
 </script>
 
 <template>
@@ -42,7 +42,9 @@ onMounted(() => {
 
       <div class="relative">
         <h2 class="text-9xl font-black tracking-tight text-gray-200">{{ props.error!.statusCode }}</h2>
-        <button class="cursor-pointer bg-white/10 hover:bg-red-500/10 text-gray-500 shadow-lg ring-1 backdrop-blur-sm ring-black/5 px-5 py-2 rounded-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" @click="handleError">
+        <button
+          class="cursor-pointer bg-white/10 hover:bg-red-500/10 text-gray-500 shadow-lg ring-1 backdrop-blur-sm ring-black/5 px-5 py-2 rounded-lg absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+          @click="handleError">
           Back to Home
         </button>
       </div>

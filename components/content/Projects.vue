@@ -51,7 +51,7 @@ const handleSlideChange = (swiper) => {
 </script>
 
 <template>
-  <section class="flex flex-row items-center justify-between pt-8 pb-12 projects" id="projects">
+  <section class="flex flex-row items-start justify-between pt-8 pb-12 projects" id="projects">
     <article class="flex gap-6 project-arrow">
       <button id="prev-project" class="text-3xl shrink-0 cursor-pointer arrow">
         <font-awesome icon="chevron-left" />
@@ -61,16 +61,16 @@ const handleSlideChange = (swiper) => {
           SwiperAutoplay,
           SwiperNavigation
         ]" :navigation="{
-            nextEl: '#next-project',
-            prevEl: '#prev-project',
-          }" :slidesPerView="1" :breakpoints="{
-            '768': {
-              slidesPerView: 1,
-            },
-            '1280': {
-              slidesPerView: 1,
-            }
-          }" :loop="true" :autoplay="{
+          nextEl: '#next-project',
+          prevEl: '#prev-project',
+        }" :slidesPerView="1" :breakpoints="{
+          '768': {
+            slidesPerView: 1,
+          },
+          '1280': {
+            slidesPerView: 1,
+          }
+        }" :loop="true" :autoplay="{
             delay: 2000,
             disableOnInteraction: true
           }" @slideChange="handleSlideChange">

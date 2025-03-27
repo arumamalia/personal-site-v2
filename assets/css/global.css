@@ -2,6 +2,10 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* * {
   transition: all 500ms ease-in-out;
 }
@@ -187,10 +191,9 @@ img {
   }
 
   .intro {
-    font-size: 137px;
+    font-size: 118px;
   }
 }
-
 
 @media screen and (max-width: 1280px) {
   .p-container {
@@ -199,19 +202,19 @@ img {
   }
 
   .logo {
-    height: 110px;
+    height: 88px;
   }
 
   .title-the {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .title-daily {
-    font-size: 112px;
+    font-size: 100px;
   }
 
   .star {
-    height: 20px;
+    height: 18px
   }
 
   .theme {
@@ -220,7 +223,7 @@ img {
   }
 
   .sub-menu {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .sub-menu-scr {
@@ -228,23 +231,23 @@ img {
   }
 
   .border-wrap {
-    margin-top: 172px;
+    margin-top: 156px;
   }
 
   .swiper-wrapper {
-    width: 520px;
+    width: 510px;
   }
 
   .project-wrapper {
-    width: 260px;
+    width: 270px;
   }
 
   .text-project {
-    font-size: 70px;
+    font-size: 74px;
   }
 
   .text-revealed {
-    font-size: 36px;
+    font-size: 40px;
   }
 
   .project-title {
@@ -252,7 +255,102 @@ img {
   }
 
   .intro {
-    font-size: 118px;
+    font-size: 102px;
+  }
+
+  .arrow {
+    font-size: 20px;
+  }
+
+  .project-arrow {
+    gap: 10px;
+  }
+
+  .text-field {
+    flex-basis: 100px;
+  }
+
+}
+
+@media screen and (max-width: 1150px) {
+  .p-container {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .logo {
+    height: 82px;
+  }
+
+  .title-the {
+    font-size: 50px;
+  }
+
+  .title-daily {
+    font-size: 86px;
+  }
+
+  .star {
+    height: 18px
+  }
+
+  .theme {
+    width: max-content;
+    font-size: 16px;
+  }
+
+  .sub-menu {
+    font-size: 22px;
+  }
+
+  .sub-menu-scr {
+    font-size: 16px;
+  }
+
+  .border-wrap {
+    margin-top: 124px
+  }
+
+  .swiper-wrapper {
+    width: 440px;
+  }
+
+  .project-wrapper {
+    width: 230px;
+  }
+
+  .text-project {
+    font-size: 64px;
+  }
+
+  .text-revealed {
+    font-size: 34px;
+  }
+
+  .project-title {
+    font-size: 22px;
+  }
+
+  .intro {
+    font-size: 88px;
+  }
+
+  .name {
+    font-size: 50px;
+  }
+
+  .moving-img {
+    height: 300px;
+  }
+
+  .icon-menu {
+    display: flex;
+    flex-grow: 0;
+    margin-left: 20px;
+  }
+
+  .menu-each {
+    display: none;
   }
 
 }
@@ -264,25 +362,25 @@ img {
   }
 
   .logo {
-    height: 94px;
+    height: 66px;
   }
 
   .title-the {
-    font-size: 56px;
+    font-size: 44px;
   }
 
   .title-daily {
-    font-size: 90px;
+    font-size: 72px;
   }
 
   .star {
     height: 16px;
   }
 
-  .theme {
+  /* .theme {
     width: 100%;
     font-size: 14px;
-  }
+  } */
 
   .sub-menu {
     font-size: 20px;
@@ -293,11 +391,11 @@ img {
   }
 
   .border-wrap {
-    margin-top: 148px;
+    margin-top: 110px;
   }
 
   .intro {
-    font-size: 96px;
+    font-size: 72px;
   }
 
   .greet {
@@ -309,7 +407,7 @@ img {
   }
 
   .moving-img {
-    height: 360px;
+    height: 200px;
   }
 
   .desc {
@@ -321,7 +419,7 @@ img {
   }
 
   .project-wrapper {
-    width: 216px;
+    width: 280px;
   }
 
   .text-project {
@@ -336,6 +434,25 @@ img {
     font-size: 22px;
   }
 
+  .project-arrow {
+    justify-content: center;
+  }
+
+  .projects {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .container-project {
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .desc-project {
+    align-items: start;
+  }
+
   .exp {
     font-size: 40px;
   }
@@ -345,15 +462,15 @@ img {
   }
 
   .hand-pointing {
-    height: 32px;
+    height: 26px;
   }
 
   .job-pst {
-    font-size: 26px;
+    font-size: 22px;
   }
 
   .job-cmp {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .icon-msg {
@@ -372,15 +489,15 @@ img {
   }
 
   .logo {
-    height: 68px;
+    height: 56px;
   }
 
   .title-the {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   .title-daily {
-    font-size: 72px;
+    font-size: 58px;
   }
 
   .theme {
@@ -393,11 +510,11 @@ img {
   }
 
   .border-wrap {
-    margin-top: 106px;
+    margin-top: 92px;
   }
 
   .intro {
-    font-size: 72px;
+    font-size: 56px;
   }
 
   .greet {
@@ -417,11 +534,7 @@ img {
   }
 
   .swiper-wrapper {
-    width: 400px;
-  }
-
-  .project-wrapper {
-    width: 200px;
+    width: 430px;
   }
 
   .text-project {
@@ -468,21 +581,6 @@ img {
     height: 20px;
   }
 
-  .projects {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .container-project {
-    flex-direction: row;
-    width: 100%;
-    gap: 20px;
-  }
-
-  .desc-project {
-    align-items: start;
-  }
-
   .socmed {
     height: 22px;
   }
@@ -495,15 +593,15 @@ img {
   }
 
   .logo {
-    height: 56px;
+    height: 46px;
   }
 
   .title-the {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .title-daily {
-    font-size: 60px;
+    font-size: 50px;
   }
 
   .theme {
@@ -516,11 +614,11 @@ img {
   }
 
   .border-wrap {
-    margin-top: 94px;
+    margin-top: 84px;
   }
 
   .intro {
-    font-size: 62px;
+    font-size: 50px;
   }
 
   .greet {
@@ -532,7 +630,7 @@ img {
   }
 
   .moving-img {
-    height: 180px;
+    height: 160px;
   }
 
   .desc {
@@ -540,11 +638,7 @@ img {
   }
 
   .swiper-wrapper {
-    width: 400px;
-  }
-
-  .project-wrapper {
-    width: 200px;
+    width: 360px;
   }
 
   .text-project {
@@ -646,6 +740,10 @@ img {
 
   .font-menu {
     font-size: 14px;
+  }
+
+  .icon-menu {
+    margin-left: auto;
   }
 
   .menu-sm {

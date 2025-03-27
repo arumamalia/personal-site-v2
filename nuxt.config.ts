@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "nuxt-swiper",
     "@vesp/nuxt-fontawesome",
     "@nuxt/image",
+    '@nuxt/ui'
   ],
   css: [
     "@fontsource/poppins/400.css",
