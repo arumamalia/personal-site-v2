@@ -1,11 +1,12 @@
 <script lang="ts" setup>
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, computed } from 'vue';
 import axios from 'axios';
 
 interface Metadata {
   title: string;
   description: string;
   image: string;
+  url: string;
 }
 
 const urls = [
@@ -16,38 +17,64 @@ const urls = [
 ];
 
 const metadataList = ref<Metadata[]>([]);
-
-onMounted(async () => {
-  for (const url of urls) {
-    try {
-      const response = await axios.get(`https://api.microlink.io/?url=${encodeURIComponent(url)}`);
-      metadataList.value.push({
-        title: response.data.data.title,
-        description: response.data.data.description,
-        image: response.data.data.image.url,
-      });
-    } catch (error) {
-      console.error(`Error fetching metadata for ${url}:`, error);
-    }
-  }
-});
-
-// First, add a reactive reference to track the current slide index
+const isLoading = ref(true);
+const error = ref(null);
 const currentSlideIndex = ref(0);
 
-// Then, define a computed property to get the current slide's metadata
-const currentMetadata = computed(() => {
-  if (metadataList.value.length && currentSlideIndex.value < metadataList.value.length) {
-    return metadataList.value[currentSlideIndex.value];
+// Fetch all metadata before initializing the swiper
+const fetchMetadata = async () => {
+  try {
+    isLoading.value = true;
+    const results = await Promise.allSettled(
+      urls.map(url =>
+        axios.get(`https://api.microlink.io/?url=${encodeURIComponent(url)}`)
+          .then(response => ({
+            title: response.data.data.title || 'Untitled Project',
+            description: response.data.data.description || 'No description available',
+            image: response.data.data.image?.url || '/placeholder-image.jpg',
+            url
+          }))
+          .catch(() => ({
+            title: 'Error loading project',
+            description: 'Could not load project details',
+            image: '/placeholder-image.jpg',
+            url
+          }))
+      )
+    );
+
+    metadataList.value = results.map(result =>
+      result.status === 'fulfilled' ? result.value : {
+        title: 'Error loading project',
+        description: 'Could not load project details',
+        image: '/placeholder-image.jpg',
+        url: urls[results.indexOf(result)] || '#'
+      }
+    );
+  } catch (err) {
+    error.value = err;
+    console.error('Error fetching metadata:', err);
+  } finally {
+    isLoading.value = false;
   }
-  return { title: '', description: '' };
+};
+
+const currentMetadata = computed(() => {
+  return metadataList.value[currentSlideIndex.value] || {
+    title: 'Loading...',
+    description: 'Please wait while we load the project details',
+    image: '/placeholder-image.jpg',
+    url: '#'
+  };
 });
 
-// Update your slide-change handler
 const handleSlideChange = (swiper) => {
-  // Update the current slide index based on swiper's active index
-  currentSlideIndex.value = swiper.realIndex; // using realIndex for proper handling when loop is enabled
+  currentSlideIndex.value = swiper.realIndex;
 };
+
+onMounted(() => {
+  fetchMetadata();
+});
 </script>
 
 <template>
@@ -56,35 +83,36 @@ const handleSlideChange = (swiper) => {
       <button id="prev-project" class="text-3xl shrink-0 cursor-pointer arrow">
         <font-awesome icon="chevron-left" />
       </button>
-      <div class="overflow-hidden">
-        <Swiper :height="50" :modules="[
-          SwiperAutoplay,
-          SwiperNavigation
-        ]" :navigation="{
+
+      <div class="overflow-hidden" v-if="!isLoading && !error">
+        <Swiper :modules="[SwiperAutoplay, SwiperNavigation]" :navigation="{
           nextEl: '#next-project',
           prevEl: '#prev-project',
-        }" :slidesPerView="1" :breakpoints="{
-          '768': {
-            slidesPerView: 1,
-          },
-          '1280': {
-            slidesPerView: 1,
-          }
-        }" :loop="true" :autoplay="{
-            delay: 2000,
+        }" :slides-per-view="1" :loop="true" :autoplay="{
+            delay: 5000, // Increased delay for better UX
             disableOnInteraction: true
-          }" @slideChange="handleSlideChange">
+          }" @slide-change="handleSlideChange">
           <SwiperSlide v-for="(item, index) in metadataList" :key="index">
-            <a :href="urls[index]" target="_blank" class="cursor-pointer">
-              <img :src="item.image" alt="">
+            <a :href="item.url" target="_blank" class="cursor-pointer">
+              <img :src="item.image" :alt="item.title" loading="lazy" class="swiper-image">
             </a>
           </SwiperSlide>
         </Swiper>
       </div>
+
+      <div v-else-if="isLoading" class="flex items-center justify-center w-full h-full">
+        <p>Loading projects...</p>
+      </div>
+
+      <div v-else class="flex items-center justify-center w-full h-full text-red-500">
+        <p>Error loading projects. Please try again later.</p>
+      </div>
+
       <button id="next-project" class="text-3xl shrink-0 cursor-pointer arrow">
         <font-awesome icon="chevron-right" />
       </button>
     </article>
+
     <article class="flex flex-col gap-3 project-wrapper w-[344px] container-project">
       <div class="flex flex-col items-center border-t-6 border-b-6 w-max h-max">
         <h1 class="font-bernard leading-none text-project">PROJECTS</h1>
@@ -109,5 +137,21 @@ const handleSlideChange = (swiper) => {
   width: 100%;
   height: 100% !important;
   object-fit: cover;
+}
+
+.swiper-image {
+  aspect-ratio: 16/9;
+  background-color: #f0f0f0;
+}
+
+/* Add transitions for smoother changes */
+.project-title,
+.project-desc {
+  transition: opacity 0.3s ease;
+}
+
+/* Loading state styles */
+.loading {
+  opacity: 0.7;
 }
 </style>
