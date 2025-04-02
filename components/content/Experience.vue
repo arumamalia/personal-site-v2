@@ -28,7 +28,7 @@ const darkTheme = useState<boolean>("darkTheme", () => false);
 <template>
   <section class="flex flex-col" id="experience">
     <h1 class="text-5xl font-stencil exp">
-      <span class="font-oswald text-3xl exp-there">THERE ARE &nbsp;</span>
+      <span class="font-oswald text-3xl exp-there">THERE IS &nbsp;</span>
       <ContentSlot unwrap="p" />
     </h1>
     <div v-if="data" class="flex gap-10 exp-wrapper">
